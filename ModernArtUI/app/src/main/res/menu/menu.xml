@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/icon_more_vert"
+        android:icon="@drawable/icon_more_vert"
+        android:iconTint="@color/white"
+        android:orderInCategory="100"
+        android:title="More Information"
+        app:showAsAction="never" />
+</menu>

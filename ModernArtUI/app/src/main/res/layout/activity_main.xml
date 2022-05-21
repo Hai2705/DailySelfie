@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        app:menu="@menu/menu"
+        app:title="Daily Selfie"
+        app:titleTextColor="@color/teal_700" />
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/blue_view"
+            android:layout_width="120dip"
+            android:layout_height="265dip"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="2.5dp"
+            android:background="@color/blue" />
+
+        <View
+            android:id="@+id/pink_view"
+            android:layout_width="120dip"
+            android:layout_height="0dp"
+            android:layout_below="@+id/blue_view"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="2.5dp"
+            android:background="@color/pink" />
+
+        <View
+            android:id="@+id/brown_view"
+            android:layout_width="0dp"
+            android:layout_height="180dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/blue_view"
+            android:background="@color/brown" />
+
+        <View
+            android:id="@+id/grey_view"
+            android:layout_width="0dp"
+            android:layout_height="180dip"
+            android:layout_below="@+id/brown_view"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/pink_view"
+            android:background="@color/grey" />
+
+        <View
+            android:id="@+id/green_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/grey_view"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/pink_view"
+            android:background="@color/teal_700" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+</LinearLayout>
